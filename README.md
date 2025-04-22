@@ -1,5 +1,3 @@
-# RN_Breast_Cancer
-
 <div align="center">
 
 <img loading="lazy" src="https://github.com/Glaubernaoli/PCD---GenomeIdentifier/assets/172425065/bcfc56a4-b124-4988-88b4-e860cb438f27" width=800>
@@ -19,7 +17,7 @@
 <h2 align="left"> 💡 Descrição </h2>
 
 <div align="justify">
-Este projeto se baseia em um conjunto de modelos preditivos para encontrar o tempo de sobrevida de pacientes com câncer de pulmão de células não pequenas. Dessa forma, foi necessário o uso de um modelo classificador binário, que prevê se o paciente foi curado ou não, ou seja, se a previsão de sobrevida é maior que 60 meses ou não, e caso não tenha sido curado, um modelo regressor, que prevê o tempo, em meses, de sobrevida deste paciente. O objetivo desse trabalho é auxiliar na urgência/intensificação de tratamento em pacientes com menos tempo de sobrevida.
+Este trabalho se baseia na predição de tumores de câncer de mama em malignos e benignos. Para isso, foi usado uma rede neural classificadora feita em python puro, apenas mudando a sua função de perda para a Binary Cross Entropu (BCE).
 </div>
 
 <h2 align="left"> 🏹 Target </h2>
@@ -28,11 +26,11 @@ Este projeto se baseia em um conjunto de modelos preditivos para encontrar o tem
 
 Para o modelo classificador binário:
  
-`Curado`: Se o paciente irá ser curado do cancer em menos de 5 meses.
+`Maligno`: Crescimento de células cancerígenas, podendo haver metástase.
 
 Para o modelo regressor floresta aleatória:
 
-`Sobrevida`: Tempo, em meses, que o paciente irá sobreviver.
+`Benigno`: Crescimento de células não cancerígnas.
 
 </div>
 
@@ -41,34 +39,25 @@ Para o modelo regressor floresta aleatória:
 
 <div align="justify">
 
-`msk_met_2021_clinical_data (1).tsv`: Dataset usado no trabalho, retirado da referência 1
+`Breast-cancer.csv`: Dataset usado no trabalho.
  
-`Estudando o Target`: Neste notebook, estudamos as colunas do dataset com potencial de serem targets para a realização dos modelos. Ao ver que as colunas presentes no dataset eram organizadas de forma diferente do que os modelos buscam, novas colunas foram criadas.
-
-`Escolhendo o modelo classificador`: Neste notebook, buscamos, por meio do Optuna, os melhores hiperparâmetos e atributos para o modelo classificador binário, onde ele prevê se o paciente foi curado, ou não.
-
-`Escolha o modelo regressor`: Neste notebook, buscamos, por meio do Optuna, os melhores hiperparâmetos e atributos para o modelo regressor, onde ele prevê o tempo de sobrevida do paciente, em meses. <br> 
-
-`Predição de sobrevida - A história`: Neste notebook, apresentamos, de forma resumida, o projeto final como um todo. Apresentando os melhores modelos treinados e teste de aplicação em um grupo pertencente no limiar de meses entre 55 e 60.
-
+`Fera_4.1`: Neste notebook, estão todos os códigos necessários para rodar o modelo, seu treinamento e o cálculo das métricas.
 
 </div>
 
-<h2 align="left"> 🤖 Modelos Usados </h2>
+<h2 align="left"> 🤖 Modelo Usado </h2>
 
 <div align="justify">
 
-`Baseline`: Este modelo é usado como uma forma de comparação aos modelos mais complexos, sendo a média ou mediana, em casos numéricos e a moda em variáveis cateóricas.
-
-`Classificador binário Floresta Aleatória`: Este modelo classifica os dados em Curados e Não-Curados. 
-
-`Regressor Floresta Aleatória`: Este modelo retorna o target do tempo de sobrevida, em meses, do paciente. Este modelo possui diversas árvores de decisão, que organiza os dados através da semelhança em um atributo, e é aleatório pois a formação dessas árvores depende da amostragem dos atributos.
+ `Rede Neural Classificadora`: Este modelo classifica os tumores em malignos e belignos. 
 
 </div>
 
-<h2 align="left"> 🧰 Ferramentas Usadas </h2>
+<h2 align="left"> 🧰 Métricas Usadas </h2>
 
 <div align="justify">
+
+`Binary Cross Entropy (BCE)`: Função de perda usada para fazer a rede neural classificadora.
 
 `Acurácia`: métrica usada na classificação de problemass binários, que se baseia nos exemplos que foram corretamente identificados.
 
@@ -129,12 +118,6 @@ Depois de baixar o projeto você deve abrí-lo no Jupyter Notebook/VS code
 | :---: | 
 
 </div>
-
-<h3 align="center"> 
- 
-`Contribuições` - Todos os autores construíram o código juntos e também atuaram como revisores do trabalho apresentado.
- 
- </h3>
 
 <div align="center">
  
