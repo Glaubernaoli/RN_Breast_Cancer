@@ -6,7 +6,7 @@
 
 <h1 align="center"> Classifier Neural Network made with pure python to predict Breast Cancer tumor </h1>
 
-### Fera Formidável, Turma 2024
+### Fera Formidável 4.1, Turma 2024
 ### Glauber Nascimento de Oliveira  
 ###  Redes Neurais e Algoritmos Genéticos -  Prof. Dr. Daniel Cassar
 
